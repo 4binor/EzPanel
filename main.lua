@@ -86,5 +86,37 @@ end)
 
 Button3.MouseButton1Click:Connect(function()
 	print("TPX активирован")
-	-- Ваш код для выполнения телепортации
+	for i,v in next, game.CoreGui:GetChildren() do
+    if v.Name == "ScreenGui" and v.ImageButton then
+        v:Destroy()
+    end
+end
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/sannin9000/Ui-Libraries/main/uwuware", true))()
+local Players = {}
+
+for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+    if v:IsA"Model" and game.Players:FindFirstChild(v.Name) then
+        table.insert(Players, (tostring(v.Name)))
+    end
+end
+
+local Window = Library:CreateWindow"Телепортация"
+
+
+  
+local Players = Window:AddList({text = "Выберите игрока", flag = "list", values = Players, callback = function(selected)
+    getgenv().selectedPlayer = selected
+end})
+
+
+Window:AddButton({text = "Телепорт", flag = "button", callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players:FindFirstChild(getgenv().selectedPlayer).Character:WaitForChild("HumanoidRootPart").CFrame
+end})
+
+
+
+
+Library:Init()
+
 end)
