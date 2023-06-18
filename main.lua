@@ -75,8 +75,7 @@ Button3.Parent = Frame
 
 -- Обработчики нажатия кнопок
 Button1.MouseButton1Click:Connect(function()
-	print("NoCl1p активирован")
-	local Workspace = game:GetService("Workspace")
+local Workspace = game:GetService("Workspace")
 local CoreGui = game:GetService("CoreGui")
 local Players = game:GetService("Players")
 local Noclip = Instance.new("ScreenGui")
@@ -203,8 +202,7 @@ end)
 end)
 
 Button2.MouseButton1Click:Connect(function()
-	print("Fly активирован")
-	-- Ваш код для активации режима полёта
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
 end)
 
 Button3.MouseButton1Click:Connect(function()
