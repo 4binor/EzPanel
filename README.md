@@ -6,7 +6,7 @@ Last beta version: 0.0.0.1B
 # Inject
 & You can use the following instructions to inject:
 
-1) Use "" loadstring(game:HttpGet('https://raw.githubusercontent.com/4binor/main/main.lua'))() "" in your Roblox script injector to inject the EzPanel script into Roblox
+1) Use "" loadstring(game:HttpGet('[https://raw.githubusercontent.com/4binor/main/main.lua](https://raw.githubusercontent.com/4binor/EzPanel/main/main.lua)'))() "" in your Roblox script injector to inject the EzPanel script into Roblox
 2) Open the mode in Roblox in which you want to use EzPanel and inject this script 
 3) All set! You can use all the features of EzPanel in Roblox
 
